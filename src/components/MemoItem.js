@@ -7,37 +7,28 @@ class MemoItem extends React.Component {
 
   }
   getStatus = () => {
-    if (this.props.memo.status) {
-      return {
-        textDecoration: 'line-through',
-        color: '#f33'
-      }
-    } else {
-      return {
-        textDecoration: 'none'
-      }
+    return {
+      borderBottom: '1px dotted #ccc',
+      padding: '30px',
+      textDecoration: this.props.memo.status ? 'line-through' : 'none',
+      color: this.props.memo.status ? '#f33' : 'null'
     }
   }
 
-  // ternary operator for single style 
-  // return {
-  //   textDecoration: this.props.memo.status ? 'line-through' : 'none'
-  // }
+
 
   render() {
     console.log(this.props.memo)
     const { id, title } = this.props.memo
     return (
       <div style={this.getStatus()}>
-        <p style={itemStyle}>{id}:{title}</p>
+        <p style={txtStyle}>{id}:{title}</p>
       </div>
     )
   }
 }
 
-const itemStyle = {
-  borderBottom: '1px solid #ccc',
-  padding: '30px',
+const txtStyle = {
   fontSize: '10vw'
 }
 MemoItem.propTypes = {
