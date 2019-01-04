@@ -6,25 +6,24 @@ export default class App extends React.Component {
   state = {
     memos: [
       {
-        id:1,
+        id: 1,
         title: 'Book boardroom',
-        seen: false
+        status: false
       },
       {
-        id:2,
+        id: 2,
         title: 'Order office supplies',
-        seen: true
+        status: true
       },
       {
-        id:3,
+        id: 3,
         title: 'Xmas party 2019',
-        seen: false
-      },
+        status: false
+      }
     ]
   }
-  render () {
-    return (
-      <Memo />
-    )
+  render() {
+    // console.log(this.state.memos)
+    return <Memo memos={this.state.memos} />
   }
 }
