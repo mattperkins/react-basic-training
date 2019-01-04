@@ -3,9 +3,13 @@ import MemoItem from './MemoItem'
 import PropTypes from 'prop-types'
 
 class Memos extends React.Component {
-  render () {
+
+  render() {
     return (
-      <h1>{this.props.memos.map(memo => <MemoItem key={memo.id} memo={memo} />)}</h1>
+      <div>{this.props.memos.map(memo =>
+        <MemoItem key={memo.id}
+          memo={memo}
+          toggleStatus={this.props.toggleStatus} />)}</div>
     )
   }
 }
