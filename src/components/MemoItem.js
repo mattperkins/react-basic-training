@@ -9,7 +9,8 @@ class MemoItem extends React.Component {
   getStatus = () => {
     if (this.props.memo.status) {
       return {
-        textDecoration: 'line-through'
+        textDecoration: 'line-through',
+        color: '#f33'
       }
     } else {
       return {
@@ -30,7 +31,8 @@ class MemoItem extends React.Component {
 }
 
 const itemStyle = {
-  backgroundColor: '#f4f4f4',
+  borderBottom: '1px solid #ccc',
+  padding: '30px',
   fontSize: '10vw'
 }
 MemoItem.propTypes = {
