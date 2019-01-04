@@ -19,6 +19,11 @@ class MemoItem extends React.Component {
     }
   }
 
+  // ternary operator for single style 
+  // return {
+  //   textDecoration: this.props.memo.status ? 'line-through' : 'none'
+  // }
+
   render() {
     console.log(this.props.memo)
     const { id, title } = this.props.memo
