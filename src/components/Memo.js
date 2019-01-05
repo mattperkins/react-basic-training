@@ -6,10 +6,13 @@ class Memos extends React.Component {
 
   render() {
     return (
-      <div>{this.props.memos.map(memo =>
-        <MemoItem key={memo.id}
-          memo={memo}
-          toggleStatus={this.props.toggleStatus} />)}</div>
+      <div>
+        {this.props.memos.map(memo =>
+          <MemoItem key={memo.id}
+            memo={memo}
+            toggleStatus={this.props.toggleStatus}
+          />)}
+      </div>
     )
   }
 }
