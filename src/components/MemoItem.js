@@ -13,12 +13,12 @@ class MemoItem extends React.Component {
   }
 
   render() {
-    console.log(this.props.memo)
+    // console.log(this.props.memo)
     const { id, title } = this.props.memo
     return (
       <div onClick={this.props.toggleStatus.bind(this, id)} style={this.getStatus()}>
         <p style={txtStyle}>
-          {id}:{title}
+          {title}
         </p>
       </div>
     )
